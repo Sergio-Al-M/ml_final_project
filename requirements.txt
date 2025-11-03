@@ -1,0 +1,20 @@
+def _pip_install(pkg):
+    try:
+        importlib.import_module(pkg.split("==")[0])
+    except Exception:
+        subprocess.check_call([sys.executable, "-m", "pip", "install", pkg])
+
+REQUIRED = [
+    "numpy", "scipy", "pandas", "matplotlib",
+    "scikit-learn",
+    "torch==2.2.2",
+    "torchmetrics>=1.3.0",
+    "tqdm",
+    "wfdb",
+    "mne",
+]
+for p in REQUIRED:
+    try:
+        _pip_install(p)
+    except Exception as e:
+        print("Warning installing", p, ":", e)
