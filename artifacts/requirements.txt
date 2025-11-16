@@ -1,0 +1,1 @@
+numpy\nscipy\npandas\nmatplotlib\nscikit-learn\ntorch==2.2.2\ntorchmetrics>=1.3.0\ntqdm\nwfdb\nmne

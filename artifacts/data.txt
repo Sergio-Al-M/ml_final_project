@@ -1,0 +1,2 @@
+Sleep-EDF Expanded (Sleep Cassette). PhysioNet.
+Place EDF files under artifacts/sleep_edf/ if auto-download is not available.
